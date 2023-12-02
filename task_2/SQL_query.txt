@@ -1,0 +1,9 @@
+SELECT 
+    o.part_number, 
+    o.manufacturer, 
+    o.price AS price_our_data, 
+    s.price AS price_sample
+FROM 
+    our_data o
+JOIN 
+    sample s ON o.part_number = s.part_number AND o.manufacturer = s.manufacturer
